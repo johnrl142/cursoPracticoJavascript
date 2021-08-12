@@ -1,0 +1,221 @@
+/*
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+
+:root {
+    /* Colores */
+    --blue: blue;
+    --blue-Secundario: #1a9af7;
+    --blue-Soft: #e7f5ff;
+    --grey: #bababa;
+    --warm-black: #282623;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+    background: linear-gradient(232deg, #282623, #1a9af7);
+    background-size: 400% 400%;
+
+    -webkit-animation: bgAnimateBitcoin 20s ease infinite;
+    -moz-animation: bgAnimateBitcoin 20s ease infinite;
+    animation: bgAnimateBitcoin 20s ease infinite;
+}
+
+@-webkit-keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bgAnimateBitcoin {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+/*header*/
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    text-align: center;    
+}
+
+.header__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;  
+    border: 1 solid black; 
+}
+
+.header__container img {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    padding-bottom: 5px;   
+}
+
+.header__container h1 {
+    padding-top: 10px;
+    font-size: 3rem;
+    color: var(--blue-Soft);
+}
+
+.header__container p {
+    padding-top: 5px;
+    font-size: 1rem;
+    color: var(--blue-Soft);
+}
+/*fin de header*/
+
+
+/* empieza el main*/
+
+.main__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background-color: var(--blue-Soft);
+    border: 1 solid var(--grey);
+    border-radius: 5px;
+    padding: 30px;
+    
+    
+}
+
+.main__container-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    background-color: var(--grey);
+    border: 1px solid var(--warm-black);
+    border-radius: 10px;
+    padding: 10px;   
+}
+
+/*imagen contenedor*/
+.main__container-card div {
+    width: auto;
+    height: auto;
+}
+
+
+.main__container-card-imgC{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(./img/cuadrado.png);
+    background-size: cover;
+}
+
+.main__container-card-imgT {
+    display: inline-block;
+    width: 68px;
+    height: 60px;
+    background-image: url(./img/triangulo.png);
+    background-size: cover;
+}
+
+.main__container-card-imgCi {
+    display: inline-block;
+    width: 90px;
+    height: 60px;
+    background-image: url(./img/circulo.png);
+    background-size: cover;
+}
+/*fin imagen contenedor*/
+
+.main__container-card h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.4rem;
+    padding-bottom: 10px;
+}
+
+.main__container-card form {
+    padding-bottom: 10px;
+}
+
+.main__container-card button {
+    width: 100px;
+    height: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: var(--blue-Secundario);
+    border: 1 solid var(--warm-black);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+/*fotter*/
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: var(--blue-Soft);
+}
+
+.footer p {
+   font-size: 1rem;
+   font-weight: bold;
+   line-height: 1.2rem;
+}
+
+.footer a {
+    cursor:pointer;
+    font-size: 1rem;
+    padding-left: 30px;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.imgFooter {
+    width: 20px;
+}
+
+
+
+
+
+
+/*
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
